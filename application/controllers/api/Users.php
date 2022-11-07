@@ -222,7 +222,7 @@ public function post_form_validation($data, $event)
     
     $data['users'] = $this->users_model->get_all($user_id);
 
-    if(isset($data['users'])){
+    if(isset($data['users']) && count($data['users'])>0){
 
       $this->response(array(
         "status" => 1,
